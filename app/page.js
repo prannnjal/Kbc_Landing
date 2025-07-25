@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useEffect } from "react"
 import {
   Menu,
   X,
@@ -21,6 +22,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Form from "@/components/ui/Form"
 
 export default function KBCIASAcademy() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -32,6 +34,10 @@ export default function KBCIASAcademy() {
     mode: "",
     message: "",
   })
+  const [year, setYear] = useState("")
+  useEffect(() => {
+    setYear(new Date().getFullYear())
+  }, [])
 
   const handleInputChange = (e) => {
     setFormData({
@@ -177,7 +183,7 @@ export default function KBCIASAcademy() {
           <div className="flex justify-between items-center py-3 lg:py-4">
             <div className="flex items-center space-x-2">
               <img
-                src="/logo.jpg"
+                src="/channels4_profile.jpg"
                 alt="KBC IAS Academy Logo"
                 className="h-10 w-10 lg:h-12 lg:w-12 rounded-lg object-contain bg-white p-1 shadow"
               />
@@ -293,77 +299,7 @@ export default function KBCIASAcademy() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <Input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Full Name *"
-                        className="h-12 text-base"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="tel"
-                        name="mobile"
-                        value={formData.mobile}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Mobile Number *"
-                        className="h-12 text-base"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Email Address *"
-                        className="h-12 text-base"
-                      />
-                    </div>
-                    <div>
-                      <select
-                        name="course"
-                        value={formData.course}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full h-12 px-3 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-                      >
-                        <option value="">Select Course *</option>
-                        <option value="upsc-foundation">UPSC Foundation Course</option>
-                        <option value="bpsc-complete">BPSC Complete Course</option>
-                        <option value="optional-subjects">Optional Subjects</option>
-                        <option value="test-series">Test Series Only</option>
-                        <option value="counseling">Need Counseling</option>
-                      </select>
-                    </div>
-                    <div>
-                      <select
-                        name="mode"
-                        value={formData.mode}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full h-12 px-3 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-                      >
-                        <option value="">Preferred Mode *</option>
-                        <option value="offline">Offline Classes</option>
-                        <option value="online">Online Classes</option>
-                        <option value="hybrid">Hybrid (Online + Offline)</option>
-                      </select>
-                    </div>
-                    <Button
-                      type="submit"
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white h-12 text-base font-semibold"
-                    >
-                      Get Free Counseling
-                    </Button>
-                  </form>
+                  <Form onSubmit={handleSubmit} formData={formData} handleInputChange={handleInputChange} buttonLabel="Get Free Counseling" />
 
                   {/* Quick Contact Options */}
                   <div className="mt-6 pt-4 border-t border-gray-200">
@@ -694,89 +630,7 @@ export default function KBCIASAcademy() {
             </div>
             <Card>
               <CardContent className="pt-6">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
-                      <Input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Mobile Number *</label>
-                      <Input
-                        type="tel"
-                        name="mobile"
-                        value={formData.mobile}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Enter your mobile number"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Email ID *</label>
-                    <Input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      placeholder="Enter your email address"
-                    />
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Course Interested *</label>
-                      <select
-                        name="course"
-                        value={formData.course}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      >
-                        <option value="">Select Course</option>
-                        <option value="upsc-foundation">UPSC Foundation</option>
-                        <option value="bpsc-complete">BPSC Complete</option>
-                        <option value="optional-subjects">Optional Subjects</option>
-                        <option value="test-series">Test Series</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Mode of Study *</label>
-                      <select
-                        name="mode"
-                        value={formData.mode}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      >
-                        <option value="">Select Mode</option>
-                        <option value="offline">Offline</option>
-                        <option value="online">Online</option>
-                        <option value="hybrid">Hybrid</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Message (Optional)</label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Any specific questions or requirements?"
-                      rows={3}
-                    />
-                  </div>
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-3">
-                    Submit Application
-                  </Button>
-                </form>
+                <Form onSubmit={handleSubmit} formData={formData} handleInputChange={handleInputChange} buttonLabel="Submit Application" />
               </CardContent>
             </Card>
           </div>
@@ -810,7 +664,7 @@ export default function KBCIASAcademy() {
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1 text-sm lg:text-base">Phone Numbers</h3>
                     <p className="text-gray-600 text-sm lg:text-base">+91-7050117555</p>
-                    <p className="text-gray-600 text-sm lg:text-base">+91-7033907555</p>
+                    <p className="text-gray-600 text-sm lg:text-base">7033907555</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -829,54 +683,51 @@ export default function KBCIASAcademy() {
                   </div>
                 </div>
               </div>
+              {/* Google Map Embed */}
+              <div className="mt-8">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.123456789!2d85.1204224!3d25.6165465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed59e54def407d:0x464e2835519606b1!2sIndraprasth%20Apartment%2C%20Besides%2C%20West%20Boring%20Canal%20Rd%2C%20below%20Vasa%20Cafe%2C%20near%20Panchmukhi%20Mandir%2C%20Anandpuri%2C%20Patna%2C%20Bihar%20800001!5e0!3m2!1sen!2sin!4v1718030000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0, borderRadius: "0.5rem", marginTop: "1rem" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="KBC IAS Academy Location"
+                />
+              </div>
               <div className="mt-8">
                 <h3 className="font-semibold text-gray-800 mb-4 text-sm lg:text-base">Follow Us</h3>
                 <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/photo.php?fbid=3250332385118141&set=a.354260511392024&type=3"
                     className="bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 text-center text-sm"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     Facebook
                   </a>
                   <a
-                    href="#"
+                    href="https://www.youtube.com/channel/UCKU0vgz6FCXRO83vyhdyy1Q"
                     className="bg-red-600 text-white px-3 py-2 rounded-lg hover:bg-red-700 text-center text-sm"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     YouTube
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/p/DKcG9u1Npaa/"
                     className="bg-pink-600 text-white px-3 py-2 rounded-lg hover:bg-pink-700 text-center text-sm"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     Instagram
                   </a>
-                  <a
-                    href="#"
-                    className="bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600 text-center text-sm"
-                  >
-                    Telegram
-                  </a>
+                 
                 </div>
               </div>
             </div>
             <div>
               <div className="bg-white p-4 lg:p-6 rounded-lg shadow-lg">
                 <h3 className="text-lg lg:text-xl font-semibold text-gray-800 mb-4">Send us a Message</h3>
-                <form className="space-y-4">
-                  <div>
-                    <Input type="text" placeholder="Your Name" className="h-10 lg:h-12" />
-                  </div>
-                  <div>
-                    <Input type="email" placeholder="Your Email" className="h-10 lg:h-12" />
-                  </div>
-                  <div>
-                    <Input type="tel" placeholder="Your Phone" className="h-10 lg:h-12" />
-                  </div>
-                  <div>
-                    <Textarea placeholder="Your Message" rows={4} />
-                  </div>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 h-10 lg:h-12">Send Message</Button>
-                </form>
+                <Form onSubmit={handleSubmit} formData={formData} handleInputChange={handleInputChange} buttonLabel="Send Message" />
               </div>
             </div>
           </div>
@@ -890,7 +741,7 @@ export default function KBCIASAcademy() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <img
-                  src="/logo.jpg"
+                  src="/channels4_profile.jpg"
                   alt="KBC IAS Academy Logo"
                   className="h-12 w-12 rounded-lg object-contain bg-white p-1 shadow"
                 />
@@ -933,7 +784,7 @@ export default function KBCIASAcademy() {
               <h4 className="font-semibold mb-4">Contact Info</h4>
               <div className="space-y-2 text-sm text-gray-400">
                 <div>+91-7050117555</div>
-                <div>+91-7033907555</div>
+                <div>7033907555</div>
                 <div>kbciasacademy@gmail.com</div>
                 <div>Anandpuri, Patna, Bihar</div>
               </div>
@@ -941,7 +792,7 @@ export default function KBCIASAcademy() {
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
             <p>
-              &copy; {new Date().getFullYear()} KBC IAS Academy. All rights reserved. | Powered by KBC Nano Publication
+              &copy; {year} KBC IAS Academy. All rights reserved. | Powered by KBC Nano Publication
             </p>
           </div>
         </div>

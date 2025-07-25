@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/channels4_profile.jpg" type="image/jpeg" />
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
