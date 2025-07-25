@@ -178,7 +178,7 @@ export default function KBCIASAcademy() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-white shadow-lg fixed w-full top-10 z-40">
+      <nav className="bg-white shadow-lg fixed w-full top-8 sm:top-10 z-40">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-3 lg:py-4">
             <div className="flex items-center space-x-2">
