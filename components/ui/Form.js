@@ -31,13 +31,25 @@ function Form({ onSubmit, formData, handleInputChange, buttonLabel }) {
         required
         className="w-full p-2 border rounded"
       />
-      <Input
+      <select
         name="course"
         value={formData.course}
         onChange={handleInputChange}
-        placeholder="Course Interested In"
-        className="w-full p-2 border rounded"
-      />
+        className="w-full p-2 border rounded bg-white text-gray-700"
+      >
+        <option value="" disabled>Select Course Interested In</option>
+        <option value="UPSC - Foundation">UPSC (Foundation)</option>
+        <option value="UPSC - Prelims-cum-Mains">UPSC (Prelims-cum-Mains)</option>
+        <option value="UPSC - Optional">UPSC (Optional)</option>
+        <option value="BPSC - Full Course">BPSC (Full Course)</option>
+        <option value="BPSC - Mains Focus">BPSC (Mains Focus)</option>
+        <option value="BPSC - Interview Guidance">BPSC (Interview Guidance)</option>
+        <option value="State PCS">State PCS (JPSC, UPPCS, etc.)</option>
+        <option value="Optional - Geography">Optional Subject (Geography)</option>
+        <option value="Optional - History">Optional Subject (History)</option>
+        <option value="Optional - Sociology">Optional Subject (Sociology)</option>
+      </select>
+
       <select
         name="mode"
         value={formData.mode}
