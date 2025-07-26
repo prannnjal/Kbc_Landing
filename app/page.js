@@ -17,49 +17,70 @@ import {
   Download,
   Calendar,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Form from "@/components/ui/Form"
+import { Button } from "@/components/ui/button.js"
+import { Input } from "@/components/ui/input.js"
+import { Textarea } from "@/components/ui/textarea.js"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card.js"
+import { Badge } from "@/components/ui/badge.js"
+import Form from "@/components/ui/Form.js"
+console.log("Form import:", Form)
 
 export default function KBCIASAcademy() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [formData, setFormData] = useState({
+  const [form, setForm] = useState({
     name: "",
     mobile: "",
     email: "",
     course: "",
     mode: "",
     message: "",
-  })
-  const [year, setYear] = useState("")
-  useEffect(() => {
-    setYear(new Date().getFullYear())
-  }, [])
+  });
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
+  const [status, setStatus] = useState("");
+  const year = new Date().getFullYear();
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-    alert("Thank you for your interest! We will contact you soon.")
-    setFormData({
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Submitting...");
+
+    try {
+      const response = await fetch("/api/proxy", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("✅ Submitted successfully!");
+        setForm({
       name: "",
       mobile: "",
       email: "",
       course: "",
       mode: "",
       message: "",
-    })
-  }
+        });
+      } else {
+        setStatus("❌ Submission failed: " + data.message);
+      }
+    } catch (error) {
+      setStatus("⚠️ Error: " + error.message);
+    }
+  };
+  
+
+
 
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
@@ -299,7 +320,7 @@ export default function KBCIASAcademy() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Form onSubmit={handleSubmit} formData={formData} handleInputChange={handleInputChange} buttonLabel="Get Free Counseling" />
+                  <Form onSubmit={handleSubmit} formData={form} handleInputChange={handleChange} buttonLabel="Get Free Counseling" />
 
                   {/* Quick Contact Options */}
                   <div className="mt-6 pt-4 border-t border-gray-200">
@@ -630,7 +651,7 @@ export default function KBCIASAcademy() {
             </div>
             <Card>
               <CardContent className="pt-6">
-                <Form onSubmit={handleSubmit} formData={formData} handleInputChange={handleInputChange} buttonLabel="Submit Application" />
+                <Form onSubmit={handleSubmit} formData={form} handleInputChange={handleChange} buttonLabel="Submit Application" />
               </CardContent>
             </Card>
           </div>
@@ -720,16 +741,16 @@ export default function KBCIASAcademy() {
                   >
                     Instagram
                   </a>
-                 
+
                 </div>
               </div>
             </div>
             <div>
               <div className="bg-white p-4 lg:p-6 rounded-lg shadow-lg">
                 <h3 className="text-lg lg:text-xl font-semibold text-gray-800 mb-4">Send us a Message</h3>
-                <Form onSubmit={handleSubmit} formData={formData} handleInputChange={handleInputChange} buttonLabel="Send Message" />
-              </div>
-            </div>
+                <Form onSubmit={handleSubmit} formData={form} handleInputChange={handleChange} buttonLabel="Send Message" />
+                  </div>
+                  </div>
           </div>
         </div>
       </section>

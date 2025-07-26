@@ -1,86 +1,70 @@
-import { Input } from "./input"
-import { Textarea } from "./textarea"
-import { Button } from "./button"
-import React from "react"
+import { Input } from "./input.js";
+import { Textarea } from "./textarea.js";
+import { Button } from "./button.js";
+import React from "react";
 
-export default function Form({ onSubmit, formData, handleInputChange, buttonLabel }) {
+function Form({ onSubmit, formData, handleInputChange, buttonLabel }) {
   return (
     <form onSubmit={onSubmit} className="space-y-4">
-      <div>
-        <Input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          required
-          placeholder="Full Name *"
-          className="h-12 text-base"
-        />
-      </div>
-      <div>
-        <Input
-          type="tel"
-          name="mobile"
-          value={formData.mobile}
-          onChange={handleInputChange}
-          required
-          placeholder="Mobile Number *"
-          className="h-12 text-base"
-        />
-      </div>
-      <div>
-        <Input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          required
-          placeholder="Email Address *"
-          className="h-12 text-base"
-        />
-      </div>
-      <div>
-        <select
-          name="course"
-          value={formData.course}
-          onChange={handleInputChange}
-          required
-          className="w-full h-12 px-3 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-        >
-          <option value="">Select Course *</option>
-          <option value="upsc-foundation">UPSC Foundation Course</option>
-          <option value="bpsc-complete">BPSC Complete Course</option>
-          <option value="optional-subjects">Optional Subjects</option>
-          <option value="test-series">Test Series Only</option>
-          <option value="counseling">Need Counseling</option>
-        </select>
-      </div>
-      <div>
-        <select
-          name="mode"
-          value={formData.mode}
-          onChange={handleInputChange}
-          required
-          className="w-full h-12 px-3 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-        >
-          <option value="">Preferred Mode *</option>
-          <option value="offline">Offline Classes</option>
-          <option value="online">Online Classes</option>
-          <option value="hybrid">Hybrid (Online + Offline)</option>
-        </select>
-      </div>
-      <div>
-        <Textarea
-          name="message"
-          value={formData.message}
-          onChange={handleInputChange}
-          placeholder="Any specific questions or requirements?"
-          rows={3}
-        />
-      </div>
-      <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 h-12 text-base font-semibold">
+      <Input
+        name="name"
+        value={formData.name}
+        onChange={handleInputChange}
+        placeholder="Your Name"
+        required
+        className="w-full p-2 border rounded"
+      />
+      <Input
+        name="mobile"
+        value={formData.mobile}
+        onChange={handleInputChange}
+        placeholder="Mobile Number"
+        required
+        className="w-full p-2 border rounded"
+      />
+      <Input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleInputChange}
+        placeholder="Email"
+        required
+        className="w-full p-2 border rounded"
+      />
+      <Input
+        name="course"
+        value={formData.course}
+        onChange={handleInputChange}
+        placeholder="Course Interested In"
+        className="w-full p-2 border rounded"
+      />
+      <select
+        name="mode"
+        value={formData.mode}
+        onChange={handleInputChange}
+        required
+        className="w-full p-2 border rounded"
+      >
+        <option value="">Select Mode</option>
+        <option value="Online">Online</option>
+        <option value="Offline">Offline</option>
+      </select>
+      <Textarea
+        name="message"
+        value={formData.message}
+        onChange={handleInputChange}
+        placeholder="Your Message"
+        rows={4}
+        className="w-full p-2 border rounded"
+      />
+      <Button
+        type="submit"
+        className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+      >
         {buttonLabel}
       </Button>
     </form>
-  )
-} 
+  );
+}
+
+export default Form; 
