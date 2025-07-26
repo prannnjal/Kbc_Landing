@@ -37,7 +37,7 @@ function Form({ onSubmit, formData, handleInputChange, buttonLabel }) {
         onChange={handleInputChange}
         className="w-full p-2 border rounded bg-white text-gray-700"
       >
-        <option value="" disabled>Select Course Interested In</option>
+        <option value="" disabled>Select Course </option>
         <option value="UPSC - Foundation">UPSC (Foundation)</option>
         <option value="UPSC - Prelims-cum-Mains">UPSC (Prelims-cum-Mains)</option>
         <option value="UPSC - Optional">UPSC (Optional)</option>
