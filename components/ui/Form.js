@@ -36,6 +36,7 @@ function Form({ onSubmit, formData, handleInputChange, buttonLabel }) {
         value={formData.course}
         onChange={handleInputChange}
         className="w-full p-2 border rounded bg-white text-gray-700"
+        suppressHydrationWarning={true}
       >
         <option value="" disabled>Select Course </option>
         <option value="UPSC - Foundation">UPSC (Foundation)</option>
@@ -56,6 +57,7 @@ function Form({ onSubmit, formData, handleInputChange, buttonLabel }) {
         onChange={handleInputChange}
         required
         className="w-full p-2 border rounded"
+        suppressHydrationWarning={true}
       >
         <option value="">Select Mode</option>
         <option value="Online">Online</option>

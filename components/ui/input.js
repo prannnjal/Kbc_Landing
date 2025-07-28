@@ -10,6 +10,7 @@ const Input = React.forwardRef(function Input({ className, type, ...props }, ref
         className
       )}
       ref={ref}
+      suppressHydrationWarning={true}
       {...props}
     />
   )

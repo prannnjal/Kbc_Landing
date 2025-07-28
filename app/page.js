@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 import {
   Menu,
   X,
@@ -26,6 +27,7 @@ import Form from "@/components/ui/Form.js"
 console.log("Form import:", Form)
 
 export default function KBCIASAcademy() {
+  const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [form, setForm] = useState({
     name: "",
@@ -37,7 +39,11 @@ export default function KBCIASAcademy() {
   });
 
   const [status, setStatus] = useState("");
-  const year = new Date().getFullYear();
+  const [year, setYear] = useState("");
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
 
   const handleChange = (e) => {
     setForm({
@@ -64,13 +70,17 @@ export default function KBCIASAcademy() {
       if (data.success) {
         setStatus("✅ Submitted successfully!");
         setForm({
-      name: "",
-      mobile: "",
-      email: "",
-      course: "",
-      mode: "",
-      message: "",
+          name: "",
+          mobile: "",
+          email: "",
+          course: "",
+          mode: "",
+          message: "",
         });
+        // Redirect to thank you page after successful submission
+        setTimeout(() => {
+          router.push("/thank-you");
+        }, 1000);
       } else {
         setStatus("❌ Submission failed: " + data.message);
       }
@@ -128,7 +138,7 @@ export default function KBCIASAcademy() {
       subject: "General Studies & PSIR",
       qualification: "M.A. Political Science, B.Ed",
       experience: "8+ Years",
-      image: "/placeholder.svg?height=200&width=200",
+      image: "/497877324_3228861070598606_4024489685022586114_n.jpg",
     },
     {
       name: "Dr. Priya Sharma",
@@ -190,7 +200,7 @@ export default function KBCIASAcademy() {
             <span className="sm:hidden">WhatsApp</span>
           </a>
           <span className="text-yellow-300">|</span>
-          <button onClick={() => scrollToSection("home")} className="flex items-center space-x-1 hover:text-yellow-300">
+          <button onClick={() => scrollToSection("home")} className="flex items-center space-x-1 hover:text-yellow-300" suppressHydrationWarning={true}>
             <BookOpen className="h-3 w-3 sm:h-4 sm:w-4" />
             <span className="hidden sm:inline">Enroll Now</span>
             <span className="sm:hidden">Enroll</span>
@@ -221,6 +231,7 @@ export default function KBCIASAcademy() {
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(" ", "-"))}
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors text-sm xl:text-base"
+                  suppressHydrationWarning={true}
                 >
                   {item}
                 </button>
@@ -228,7 +239,7 @@ export default function KBCIASAcademy() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button className="lg:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button className="lg:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)} suppressHydrationWarning={true}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
@@ -243,6 +254,7 @@ export default function KBCIASAcademy() {
                       key={item}
                       onClick={() => scrollToSection(item.toLowerCase().replace(" ", "-"))}
                       className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 border-b border-gray-100 last:border-b-0"
+                      suppressHydrationWarning={true}
                     >
                       {item}
                     </button>
@@ -440,9 +452,9 @@ export default function KBCIASAcademy() {
             </div>
             <div className="space-y-4 lg:space-y-6 order-1 lg:order-2">
               <img
-                src="/placeholder.svg?height=300&width=500"
+                src="/channels4_profile.jpg"
                 alt="KBC IAS Academy"
-                className="rounded-lg shadow-lg w-full"
+                className="rounded-lg shadow-lg w-full object-contain bg-white p-4"
               />
               <div className="grid grid-cols-2 gap-3 lg:gap-4">
                 <div className="bg-white p-3 lg:p-4 rounded-lg shadow">
@@ -778,16 +790,16 @@ export default function KBCIASAcademy() {
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <div className="space-y-2 text-sm">
-                <button onClick={() => scrollToSection("about")} className="block text-gray-400 hover:text-white">
+                <button onClick={() => scrollToSection("about")} className="block text-gray-400 hover:text-white" suppressHydrationWarning={true}>
                   About Us
                 </button>
-                <button onClick={() => scrollToSection("courses")} className="block text-gray-400 hover:text-white">
+                <button onClick={() => scrollToSection("courses")} className="block text-gray-400 hover:text-white" suppressHydrationWarning={true}>
                   Courses
                 </button>
-                <button onClick={() => scrollToSection("faculty")} className="block text-gray-400 hover:text-white">
+                <button onClick={() => scrollToSection("faculty")} className="block text-gray-400 hover:text-white" suppressHydrationWarning={true}>
                   Faculty
                 </button>
-                <button onClick={() => scrollToSection("toppers")} className="block text-gray-400 hover:text-white">
+                <button onClick={() => scrollToSection("toppers")} className="block text-gray-400 hover:text-white" suppressHydrationWarning={true}>
                   Results
                 </button>
               </div>
@@ -812,7 +824,7 @@ export default function KBCIASAcademy() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>
+            <p suppressHydrationWarning={true}>
               &copy; {year} KBC IAS Academy. All rights reserved. | Powered by KBC Nano Publication
             </p>
           </div>
