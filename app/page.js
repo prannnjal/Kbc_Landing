@@ -78,6 +78,7 @@ export default function KBCIASAcademy() {
           message: "",
         });
         // Redirect to thank you page after successful submission
+        // setTimeout(() => {
         setTimeout(() => {
           router.push("/thank-you");
         }, 1000);
