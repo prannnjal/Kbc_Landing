@@ -504,13 +504,48 @@ His tenure is remembered for streamlining the examination process and ensuring a
                   </ul>
                 </div>
                 <div className="bg-blue-50 p-4 lg:p-6 rounded-lg">
-                  <h3 className="text-base lg:text-lg font-semibold text-gray-800 mb-2">Director's Message</h3>
-                  <p className="text-gray-600 italic text-sm lg:text-base">
+                  <h3 className="text-base lg:text-lg font-semibold text-gray-800 mb-3">Director's Message</h3>
+                  <p className="text-gray-600 italic text-sm lg:text-base mb-4">
                     "Civil services is not just an exam, it is a responsibility. At KBC IAS Academy, we are not just
                     preparing students for exams, we are shaping future administrators of the nation."
                   </p>
-                  <p className="text-xs lg:text-sm text-gray-500 mt-2">— Rohit Kumar, Founder & Director</p>
+                  <p className="text-xs lg:text-sm text-gray-500 mb-4">— Rohit Kumar, Founder & Director</p>
+                  
+                  <div className="border-t pt-4">
+                    <p className="text-gray-700 text-sm lg:text-base leading-relaxed mb-4">
+                      Rohit Kumar, the visionary behind KBC IAS Academy, is a dynamic mentor, motivational speaker, and seasoned educator with years of experience in mentoring UPSC/BPSC aspirants. His teaching style is known for its clarity, in-depth analysis, and student-centered approach. Under his leadership, KBC IAS Academy has grown into a leading name in Bihar and beyond.
+                    </p>
+                  </div>
                 </div>
+                
+                <div className="bg-gray-50 p-4 lg:p-6 rounded-lg border-l-4 border-blue-500">
+                  <h3 className="text-base lg:text-lg font-semibold text-gray-800 mb-3">Our Journey</h3>
+                  <p className="text-gray-700 text-sm lg:text-base leading-relaxed mb-4">
+                    KBC IAS Academy started with a single classroom and a powerful idea: to make civil services preparation accessible to every serious aspirant in Bihar. Over the years:
+                  </p>
+                  <ul className="text-gray-700 space-y-2 text-sm lg:text-base">
+                    <li className="flex items-start">
+                      <span className="text-blue-600 font-bold mr-2">•</span>
+                      We have mentored thousands of aspirants, many of whom are now serving as officers in various departments.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 font-bold mr-2">•</span>
+                      We introduced bilingual content (Hindi-English) for inclusive learning.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 font-bold mr-2">•</span>
+                      Partnered with KBC Nano Publication, ensuring high-quality and updated study material for competitive exams.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 font-bold mr-2">•</span>
+                      Conducted live test series, online-offline hybrid classes, and specialized foundation + mains programs.
+                    </li>
+                  </ul>
+                  <p className="text-gray-700 text-sm lg:text-base leading-relaxed mt-4 italic">
+                    From humble beginnings to becoming a trusted name in UPSC/BPSC coaching, our journey reflects dedication, innovation, and a commitment to excellence.
+                  </p>
+                </div>
+
               </div>
             </div>
             <div className="space-y-4 lg:space-y-6 order-1 lg:order-2">
@@ -529,6 +564,57 @@ His tenure is remembered for streamlining the examination process and ensuring a
                   <BookOpen className="h-6 w-6 lg:h-8 lg:w-8 text-blue-600 mb-2" />
                   <h4 className="font-semibold text-sm lg:text-base">Updated Content</h4>
                   <p className="text-xs lg:text-sm text-gray-600">Latest syllabus and current affairs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guidance */}
+      <section className="py-12 lg:py-16 bg-green-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8 lg:mb-12">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Under Expert Guidance</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm lg:text-base">
+              KBC IAS Academy operates under the mentorship and guidance of distinguished civil servants
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-8 lg:p-12">
+              <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
+                <div className="flex-shrink-0">
+                  <img
+                    src="/5acf3515-6b05-4ba9-b310-5f8b5b83aafa.jpg"
+                    alt="Ashish Bharati IPS"
+                    className="w-48 h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-xl border-4 border-green-100"
+                  />
+                </div>
+                <div className="flex-1 text-center lg:text-left">
+                  <div className="mb-6">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-green-700 mb-2">Ashish Bharati (IPS)</h3>
+                    <p className="text-lg lg:text-xl text-gray-600 font-medium mb-4">Indian Police Service Officer</p>
+                    <div className="w-24 h-1 bg-green-500 mx-auto lg:mx-0 mb-6"></div>
+                  </div>
+                  <div className="space-y-4 text-gray-700 text-sm lg:text-base leading-relaxed">
+                    <p>
+                      KBC IAS Academy is privileged to operate under the expert guidance of Ashish Bharati, 
+                      a distinguished Indian Police Service (IPS) officer. His invaluable insights and 
+                      administrative experience provide our students with a unique perspective on civil services.
+                    </p>
+                    <p>
+                      With his deep understanding of governance, law enforcement, and public administration, 
+                      Mr. Bharati ensures that our academy maintains the highest standards of excellence 
+                      and prepares students not just for examinations, but for the responsibilities of 
+                      public service.
+                    </p>
+                    <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500 mt-6">
+                      <p className="text-green-800 font-medium italic">
+                        "The guidance of experienced civil servants like Ashish Bharati IPS ensures that 
+                        our students receive authentic insights into the world of public administration."
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -572,6 +658,195 @@ His tenure is remembered for streamlining the examination process and ensuring a
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Infrastructure & Facilities */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Infrastructure & Facilities</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              KBC IAS Academy provides a modern and conducive learning environment that supports academic growth
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">Classrooms</h3>
+                <ul className="text-sm text-gray-600 space-y-2 text-left">
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Fully air-conditioned, spacious smart classrooms
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Projector-based visual learning aids
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Limited batch size for individual attention
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">Library</h3>
+                <ul className="text-sm text-gray-600 space-y-2 text-left">
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Well-stocked with standard NCERTs, reference books, and journals
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Separate reading rooms for boys and girls
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Open 7 days a week for registered students
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">Digital Support</h3>
+                <ul className="text-sm text-gray-600 space-y-2 text-left">
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Mobile App and Student Portal access
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Recorded lectures, PDF notes, and current affairs modules
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Online live doubt sessions and performance tracking
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-6 w-6 text-orange-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">Extra Support</h3>
+                <ul className="text-sm text-gray-600 space-y-2 text-left">
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Weekly tests & mentorship sessions
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Essay writing and interview preparation guidance
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 font-bold mr-2">•</span>
+                    Motivational and strategy seminars by toppers & officers
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Powered by KBC Nano Publication */}
+          <div className="bg-blue-50 rounded-xl p-8 lg:p-12 mb-12">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Powered by KBC Nano Publication</h3>
+              <p className="text-gray-600 max-w-3xl mx-auto text-sm lg:text-base">
+                KBC IAS Academy is proudly powered by KBC Nano Publication, a trusted name in educational publishing. 
+                This collaboration allows our students to access concise, accurate, and exam-relevant materials designed 
+                specifically for UPSC and State PCS exams.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="h-8 w-8 text-blue-600" />
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2">Updated Current Affairs Capsules</h4>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="h-8 w-8 text-green-600" />
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2">Exam-Focused NCERT-Based Notes</h4>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Download className="h-8 w-8 text-purple-600" />
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2">Bilingual Mock Tests and PYQs</h4>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-orange-600" />
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2">Compact Revision Booklets</h4>
+              </div>
+            </div>
+          </div>
+
+          {/* Why Choose KBC IAS Academy */}
+          <div className="bg-gray-50 rounded-xl p-8 lg:p-12">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Why Choose KBC IAS Academy?</h3>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-blue-600" />
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2">Expert Faculty</h4>
+                <p className="text-sm text-gray-600">With proven track records</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-green-600" />
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2">Individual Mentorship</h4>
+                <p className="text-sm text-gray-600">And career guidance</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="h-8 w-8 text-purple-600" />
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2">Affordable Fees</h4>
+                <p className="text-sm text-gray-600">With scholarships for meritorious students</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-orange-600" />
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2">Bihar's Trusted Platform</h4>
+                <p className="text-sm text-gray-600">With excellent results in UPSC/BPSC exams</p>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <p className="text-gray-700 text-lg font-medium mb-4">
+                Let us be a part of your journey towards becoming an officer.
+              </p>
+              <p className="text-blue-600 text-xl font-bold">
+                Join KBC IAS Academy – where dedication meets direction.
+              </p>
+            </div>
           </div>
         </div>
       </section>
