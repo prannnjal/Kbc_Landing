@@ -620,19 +620,19 @@ His mentorship ensures that students receive authentic insights into the world o
                   </div>
                   <div className="space-y-4 text-gray-700 text-sm lg:text-base leading-relaxed">
                     <p>
-                      KBC IAS Academy is privileged to operate under the expert guidance of Ashish Bharati, 
+                      KBC IAS Academy is privileged to operate under the expert guidance of Ashish Bharti, 
                       a distinguished Indian Police Service (IPS) officer. His invaluable insights and 
                       administrative experience provide our students with a unique perspective on civil services.
                     </p>
                     <p>
                       With his deep understanding of governance, law enforcement, and public administration, 
-                      Mr. Bharati ensures that our academy maintains the highest standards of excellence 
+                      Mr. Bharti ensures that our academy maintains the highest standards of excellence 
                       and prepares students not just for examinations, but for the responsibilities of 
                       public service.
                     </p>
                     <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500 mt-6">
                       <p className="text-green-800 font-medium italic">
-                        "The guidance of experienced civil servants like Ashish Bharati IPS ensures that 
+                        "The guidance of experienced civil servants like Ashish Bharti IPS ensures that 
                         our students receive authentic insights into the world of public administration."
                       </p>
                     </div>
