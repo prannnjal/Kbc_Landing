@@ -136,24 +136,38 @@ export default function KBCIASAcademy() {
   const faculty = [
     {
       name: "Rohit Kumar",
-      subject: "General Studies & PSIR",
-      qualification: "M.A. Political Science, B.Ed",
-      experience: "8+ Years",
-      image: "/497877324_3228861070598606_4024489685022586114_n.jpg",
+      subject: "Economics Faculty",
+      qualification: "Expert in Economics",
+      experience: "Experienced Educator",
+      image: "/fac5.png",
     },
     {
-      name: "Dr. Priya Sharma",
-      subject: "History & Culture",
-      qualification: "Ph.D. History, NET",
-      experience: "6+ Years",
-      image: "/placeholder.svg?height=200&width=200",
+      name: "Mrityunjay Rai",
+      subject: "History Faculty",
+      qualification: "BAHUBALI SIR",
+      experience: "Expert in History",
+      image: "/fac1.jpg",
     },
     {
-      name: "Amit Singh",
-      subject: "Geography & Environment",
-      qualification: "M.Sc. Geography",
-      experience: "5+ Years",
-      image: "/placeholder.svg?height=200&width=200",
+      name: "D K Upadhyay",
+      subject: "Geography Faculty",
+      qualification: "Expert in Geography",
+      experience: "Experienced Educator",
+      image: "/fac2.jpg",
+    },
+    {
+      name: "Akash Bhattacharya",
+      subject: "General Studies",
+      qualification: "Faculty at Shubhra Ranjan IAS | ALS IAS | IAS Baba",
+      experience: "Expert Educator",
+      image: "/fac3.jpg",
+    },
+    {
+      name: "Imteyaz Ahmad Karimi",
+      subject: "Public Administration",
+      qualification: "Former Chairman, Bihar Public Service Commission (BPSC)",
+      experience: "Ex-BPSC Chairman",
+      image: "/fac4.jpg",
     },
   ]
 
@@ -498,8 +512,8 @@ export default function KBCIASAcademy() {
                   <p className="text-gray-600 text-xs lg:text-sm mb-1">{teacher.qualification}</p>
                   <p className="text-gray-600 text-xs lg:text-sm mb-4">{teacher.experience}</p>
                   <Button variant="outline" className="w-full bg-transparent text-sm">
-                    <Play className="h-4 w-4 mr-2" />
-                    Demo Class
+                    
+                    Know More
                   </Button>
                 </CardContent>
               </Card>
