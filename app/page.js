@@ -23,6 +23,7 @@ import { Input } from "@/components/ui/input.js"
 import { Textarea } from "@/components/ui/textarea.js"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card.js"
 import { Badge } from "@/components/ui/badge.js"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog.js"
 import Form from "@/components/ui/Form.js"
 console.log("Form import:", Form)
 
@@ -40,6 +41,8 @@ export default function KBCIASAcademy() {
 
   const [status, setStatus] = useState("");
   const [year, setYear] = useState("");
+  const [selectedFaculty, setSelectedFaculty] = useState(null);
+  const [isFacultyDialogOpen, setIsFacultyDialogOpen] = useState(false);
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -140,6 +143,15 @@ export default function KBCIASAcademy() {
       qualification: "Expert in Economics",
       experience: "Experienced Educator",
       image: "/fac5.png",
+      description: `I am Rohit Kumar, the visionary behind KBC IAS Academy, dedicated to shaping the future of aspirants preparing for UPSC, BPSC, and other State PCS exams. With a strong commitment to quality education and result-oriented guidance, I've designed structured programs that simplify preparation and build a strong conceptual foundation.
+
+🔹 Passionate Educator & Mentor
+🔹 Focused on UPSC & BPSC Success
+🔹 Pioneer of structured Mains Answer Writing Programs
+🔹 Known for innovative teaching methods and student-friendly approach
+🔹 Believer in discipline, consistency, and mentorship as keys to cracking civil services
+
+At KBC IAS Academy, we don't just teach—we mentor, support, and lead students to their dream careers in civil services.`
     },
     {
       name: "Mrityunjay Rai",
@@ -147,6 +159,15 @@ export default function KBCIASAcademy() {
       qualification: "BAHUBALI SIR",
       experience: "Expert in History",
       image: "/fac1.jpg",
+      description: `I am Mrityunjay Rai, fondly known as Bahubali Sir, a committed History faculty at KBC IAS Academy, where I guide aspirants through the intricate layers of Indian and World History for UPSC, BPSC, and other State PCS exams. My mission is to turn History from a subject of facts to a story of power, struggle, and legacy—making it meaningful and memorable for students.
+
+🔹 Expert in Modern, Ancient & Medieval History
+🔹 Known for engaging storytelling and simplified timelines
+🔹 Focused on both Prelims and Mains strategy
+🔹 Strong emphasis on cause-effect analysis in historical events
+🔹 Dedicated to building analytical thinking through historical perspective
+
+At KBC IAS Academy, I don't just teach history—I bring it alive to empower future civil servants with perspective and understanding.`
     },
     {
       name: "D K Upadhyay",
@@ -154,6 +175,15 @@ export default function KBCIASAcademy() {
       qualification: "Expert in Geography",
       experience: "Experienced Educator",
       image: "/fac2.jpg",
+      description: `I am D K Upadhyay, Geography faculty at KBC IAS Academy, dedicated to transforming how aspirants approach both Physical and Human Geography for UPSC, BPSC, and State PCS examinations. My teaching integrates real-world relevance with theoretical clarity to help students master this scoring subject.
+
+🔹 Specialist in Physical, Human & Indian Geography
+🔹 Focused on map-based learning and answer enrichment
+🔹 Believer in concept clarity with current affairs integration
+🔹 Extensive experience with Prelims & Mains trends
+🔹 Passionate about visual learning and practical application
+
+At KBC IAS Academy, I mentor students to decode geography not just for exams, but as a tool to understand the world better.`
     },
     {
       name: "Akash Bhattacharya",
@@ -161,6 +191,15 @@ export default function KBCIASAcademy() {
       qualification: "Faculty at Shubhra Ranjan IAS | ALS IAS | IAS Baba",
       experience: "Expert Educator",
       image: "/fac3.jpg",
+      description: `I am Akash Bhattacharya, a dedicated mentor with teaching experience at Shubhra Ranjan IAS, ALS IAS, and IAS Baba, now associated with KBC IAS Academy. With a passion for Polity, Governance, and Current Affairs, I aim to deliver impactful lectures and strategic insights to help aspirants navigate dynamic topics with ease.
+
+🔹 Faculty with national-level IAS institutions
+🔹 Expert in Polity, Governance & Current Affairs
+🔹 Known for clarity, precision, and relevance in teaching
+🔹 Emphasis on answer writing and linking theory with practice
+🔹 Driven by the goal of making aspirants exam-ready and policy-aware
+
+At KBC IAS Academy, I strive to bridge textbook knowledge with real-time understanding to produce confident and competent civil servants.`
     },
     {
       name: "Imteyaz Ahmad Karimi",
@@ -168,6 +207,15 @@ export default function KBCIASAcademy() {
       qualification: "Former Chairman, Bihar Public Service Commission (BPSC)",
       experience: "Ex-BPSC Chairman",
       image: "/fac4.jpg",
+      description: `Imteyaz Ahmad Karimi is a distinguished civil servant and administrator who served as the Chairman of the Bihar Public Service Commission (BPSC). Known for his integrity, administrative acumen, and commitment to transparency in recruitment, Mr. Karimi played a vital role in reforming the functioning of BPSC during his tenure.
+
+🔹 Former IAS Officer with extensive administrative experience
+🔹 Introduced reforms to ensure timely and fair conduct of exams
+🔹 Promoted digitalization and process transparency in BPSC
+🔹 Advocated merit-based selections and strict adherence to examination standards
+🔹 Respected for his ethical leadership and student-friendly orientation
+
+His tenure is remembered for streamlining the examination process and ensuring accountability in the state's civil services recruitment. His expertise provides invaluable insights into the examination system and administrative processes.`
     },
   ]
 
@@ -511,8 +559,14 @@ export default function KBCIASAcademy() {
                   <p className="text-blue-600 font-medium mb-2 text-sm lg:text-base">{teacher.subject}</p>
                   <p className="text-gray-600 text-xs lg:text-sm mb-1">{teacher.qualification}</p>
                   <p className="text-gray-600 text-xs lg:text-sm mb-4">{teacher.experience}</p>
-                  <Button variant="outline" className="w-full bg-transparent text-sm">
-                    
+                  <Button 
+                    variant="outline" 
+                    className="w-full bg-transparent text-sm"
+                    onClick={() => {
+                      setSelectedFaculty(teacher);
+                      setIsFacultyDialogOpen(true);
+                    }}
+                  >
                     Know More
                   </Button>
                 </CardContent>
@@ -863,6 +917,47 @@ export default function KBCIASAcademy() {
           <Phone className="h-5 w-5 lg:h-6 lg:w-6" />
         </a>
       </div>
+
+      {/* Faculty Details Dialog */}
+      <Dialog open={isFacultyDialogOpen} onOpenChange={setIsFacultyDialogOpen}>
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-gray-800">
+              {selectedFaculty?.name}
+            </DialogTitle>
+          </DialogHeader>
+          {selectedFaculty && (
+            <div className="space-y-6">
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="flex-shrink-0">
+                  <img
+                    src={selectedFaculty.image}
+                    alt={selectedFaculty.name}
+                    className="w-48 h-48 rounded-lg object-cover shadow-lg"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-blue-600 mb-2">
+                    {selectedFaculty.subject}
+                  </h3>
+                  <p className="text-gray-600 font-medium mb-1">
+                    {selectedFaculty.qualification}
+                  </p>
+                  <p className="text-gray-600 mb-4">
+                    {selectedFaculty.experience}
+                  </p>
+                </div>
+              </div>
+              <div className="border-t pt-4">
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">About</h4>
+                <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                  {selectedFaculty.description}
+                </div>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }
