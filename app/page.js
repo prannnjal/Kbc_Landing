@@ -143,6 +143,7 @@ export default function KBCIASAcademy() {
       qualification: "Expert in Economics",
       experience: "Experienced Educator",
       image: "/fac5.png",
+      youtubeUrl: "https://youtu.be/nhXXQdu7nKc?si=rHPsKIFuIBlT4aWR",
       description: `I am Rohit Kumar, the visionary behind KBC IAS Academy, dedicated to shaping the future of aspirants preparing for UPSC, BPSC, and other State PCS exams. With a strong commitment to quality education and result-oriented guidance, I've designed structured programs that simplify preparation and build a strong conceptual foundation.
 
 🔹 Passionate Educator & Mentor
@@ -159,6 +160,7 @@ At KBC IAS Academy, we don't just teach—we mentor, support, and lead students 
       qualification: "BAHUBALI SIR",
       experience: "Expert in History",
       image: "/fac1.jpg",
+      youtubeUrl: "https://www.youtube.com/live/vQyZfQmpbLA?si=IWwcAJd6_E1ScUcY",
       description: `I am Mrityunjay Rai, fondly known as Bahubali Sir, a committed History faculty at KBC IAS Academy, where I guide aspirants through the intricate layers of Indian and World History for UPSC, BPSC, and other State PCS exams. My mission is to turn History from a subject of facts to a story of power, struggle, and legacy—making it meaningful and memorable for students.
 
 🔹 Expert in Modern, Ancient & Medieval History
@@ -175,6 +177,7 @@ At KBC IAS Academy, I don't just teach history—I bring it alive to empower fut
       qualification: "Expert in Geography",
       experience: "Experienced Educator",
       image: "/fac2.jpg",
+      youtubeUrl: "https://www.youtube.com/live/8gWTc80LWy8?si=dY7AzjFF5dqEFXzS",
       description: `I am D K Upadhyay, Geography faculty at KBC IAS Academy, dedicated to transforming how aspirants approach both Physical and Human Geography for UPSC, BPSC, and State PCS examinations. My teaching integrates real-world relevance with theoretical clarity to help students master this scoring subject.
 
 🔹 Specialist in Physical, Human & Indian Geography
@@ -191,6 +194,7 @@ At KBC IAS Academy, I mentor students to decode geography not just for exams, bu
       qualification: "Faculty at Shubhra Ranjan IAS | ALS IAS | IAS Baba",
       experience: "Expert Educator",
       image: "/fac3.jpg",
+      youtubeUrl: "",
       description: `I am Akash Bhattacharya, a dedicated mentor with teaching experience at Shubhra Ranjan IAS, ALS IAS, and IAS Baba, now associated with KBC IAS Academy. With a passion for Polity, Governance, and Current Affairs, I aim to deliver impactful lectures and strategic insights to help aspirants navigate dynamic topics with ease.
 
 🔹 Faculty with national-level IAS institutions
@@ -207,6 +211,7 @@ At KBC IAS Academy, I strive to bridge textbook knowledge with real-time underst
       qualification: "Former Chairman, Bihar Public Service Commission (BPSC)",
       experience: "Ex-BPSC Chairman",
       image: "/fac4.jpg",
+      youtubeUrl: "https://www.youtube.com/live/2J64kbrLyDM?si=r0IQlQS6vNKR4hjw",
       description: `Imteyaz Ahmad Karimi is a distinguished civil servant and administrator who served as the Chairman of the Bihar Public Service Commission (BPSC). Known for his integrity, administrative acumen, and commitment to transparency in recruitment, Mr. Karimi played a vital role in reforming the functioning of BPSC during his tenure.
 
 🔹 Former IAS Officer with extensive administrative experience
@@ -216,6 +221,23 @@ At KBC IAS Academy, I strive to bridge textbook knowledge with real-time underst
 🔹 Respected for his ethical leadership and student-friendly orientation
 
 His tenure is remembered for streamlining the examination process and ensuring accountability in the state's civil services recruitment. His expertise provides invaluable insights into the examination system and administrative processes.`
+    },
+    {
+      name: "Ashish Bharati",
+      subject: "IPS Officer & Mentor",
+      qualification: "Indian Police Service Officer",
+      experience: "Ex-BPSC Chairman",
+      image: "/5acf3515-6b05-4ba9-b310-5f8b5b83aafa.jpg",
+      youtubeUrl: "https://www.youtube.com/live/CxaYO_hajBM?si=ncKoXoLZqTDy_tLq",
+      description: `Ashish Bharati is a distinguished Indian Police Service (IPS) officer who serves as a mentor and guide for KBC IAS Academy. With his extensive experience in law enforcement and public administration, he provides invaluable insights into the civil services examination and the responsibilities of public service.
+
+🔹 Distinguished IPS Officer with administrative expertise
+🔹 Mentor for civil services aspirants
+🔹 Expert in law enforcement and governance
+🔹 Provides guidance on examination strategies
+🔹 Shares real-world administrative experiences
+
+His mentorship ensures that students receive authentic insights into the world of public administration and understand the responsibilities that come with civil services positions.`
     },
   ]
 
@@ -515,7 +537,7 @@ His tenure is remembered for streamlining the examination process and ensuring a
                     <p className="text-gray-700 text-sm lg:text-base leading-relaxed mb-4">
                       Rohit Kumar, the visionary behind KBC IAS Academy, is a dynamic mentor, motivational speaker, and seasoned educator with years of experience in mentoring UPSC/BPSC aspirants. His teaching style is known for its clarity, in-depth analysis, and student-centered approach. Under his leadership, KBC IAS Academy has grown into a leading name in Bihar and beyond.
                     </p>
-                  </div>
+                </div>
                 </div>
                 
                 <div className="bg-gray-50 p-4 lg:p-6 rounded-lg border-l-4 border-blue-500">
@@ -592,7 +614,7 @@ His tenure is remembered for streamlining the examination process and ensuring a
                 </div>
                 <div className="flex-1 text-center lg:text-left">
                   <div className="mb-6">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-green-700 mb-2">Ashish Bharati (IPS)</h3>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-green-700 mb-2">Ashish Bharti (IPS)</h3>
                     <p className="text-lg lg:text-xl text-gray-600 font-medium mb-4">Indian Police Service Officer</p>
                     <div className="w-24 h-1 bg-green-500 mx-auto lg:mx-0 mb-6"></div>
                   </div>
@@ -645,16 +667,31 @@ His tenure is remembered for streamlining the examination process and ensuring a
                   <p className="text-blue-600 font-medium mb-2 text-sm lg:text-base">{teacher.subject}</p>
                   <p className="text-gray-600 text-xs lg:text-sm mb-1">{teacher.qualification}</p>
                   <p className="text-gray-600 text-xs lg:text-sm mb-4">{teacher.experience}</p>
-                  <Button 
-                    variant="outline" 
-                    className="w-full bg-transparent text-sm"
-                    onClick={() => {
-                      setSelectedFaculty(teacher);
-                      setIsFacultyDialogOpen(true);
-                    }}
-                  >
-                    Know More
+                  <div className="flex gap-2">
+                    <Button 
+                      variant="outline" 
+                      className="flex-1 bg-transparent text-sm"
+                      onClick={() => {
+                        setSelectedFaculty(teacher);
+                        setIsFacultyDialogOpen(true);
+                      }}
+                    >
+                      Know More
                   </Button>
+                    {teacher.youtubeUrl && (
+                      <Button 
+                        variant="outline" 
+                        className="flex-1 bg-blue-50 text-blue-600 border-blue-200 hover:bg-blue-100 text-sm"
+                        onClick={() => {
+                          setSelectedFaculty(teacher);
+                          setIsFacultyDialogOpen(true);
+                        }}
+                      >
+                        <Play className="h-3 w-3 mr-1" />
+                        Demo
+                      </Button>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -1195,7 +1232,7 @@ His tenure is remembered for streamlining the examination process and ensuring a
 
       {/* Faculty Details Dialog */}
       <Dialog open={isFacultyDialogOpen} onOpenChange={setIsFacultyDialogOpen}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-gray-800">
               {selectedFaculty?.name}
@@ -1203,7 +1240,7 @@ His tenure is remembered for streamlining the examination process and ensuring a
           </DialogHeader>
           {selectedFaculty && (
             <div className="space-y-6">
-              <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex flex-col lg:flex-row gap-6">
                 <div className="flex-shrink-0">
                   <img
                     src={selectedFaculty.image}
@@ -1223,6 +1260,29 @@ His tenure is remembered for streamlining the examination process and ensuring a
                   </p>
                 </div>
               </div>
+              
+              {selectedFaculty.youtubeUrl && (
+                <div className="border-t pt-4">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Demo Video</h4>
+                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <iframe
+                      src={selectedFaculty.youtubeUrl.includes('youtu.be') 
+                        ? selectedFaculty.youtubeUrl.replace('youtu.be/', 'youtube.com/embed/')
+                        : selectedFaculty.youtubeUrl.includes('watch?v=')
+                        ? selectedFaculty.youtubeUrl.replace('watch?v=', 'embed/')
+                        : selectedFaculty.youtubeUrl.includes('live/')
+                        ? selectedFaculty.youtubeUrl.replace('live/', 'embed/')
+                        : selectedFaculty.youtubeUrl}
+                      title={`${selectedFaculty.name} Demo Video`}
+                      className="absolute top-0 left-0 w-full h-full rounded-lg"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              )}
+              
               <div className="border-t pt-4">
                 <h4 className="text-lg font-semibold text-gray-800 mb-3">About</h4>
                 <div className="text-gray-700 leading-relaxed whitespace-pre-line">
