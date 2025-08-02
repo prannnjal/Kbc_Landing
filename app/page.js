@@ -43,6 +43,7 @@ export default function KBCIASAcademy() {
   const [year, setYear] = useState("");
   const [selectedFaculty, setSelectedFaculty] = useState(null);
   const [isFacultyDialogOpen, setIsFacultyDialogOpen] = useState(false);
+  const [isDemoDialogOpen, setIsDemoDialogOpen] = useState(false);
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -391,6 +392,7 @@ His mentorship ensures that students receive authentic insights into the world o
                 <Button
                   variant="outline"
                   className="border-blue-600 text-blue-600 hover:bg-blue-50 px-6 lg:px-8 py-2 lg:py-3 text-base lg:text-lg bg-transparent"
+                  onClick={() => setIsDemoDialogOpen(true)}
                 >
                   <Play className="h-4 w-4 mr-2" />
                   Watch Demo
@@ -1291,6 +1293,27 @@ His mentorship ensures that students receive authentic insights into the world o
               </div>
             </div>
           )}
+        </DialogContent>
+      </Dialog>
+
+      {/* Demo Video Dialog */}
+      <Dialog open={isDemoDialogOpen} onOpenChange={setIsDemoDialogOpen}>
+        <DialogContent className="max-w-4xl">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-gray-800">
+              Watch Demo - Rohit Kumar
+            </DialogTitle>
+          </DialogHeader>
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              src="https://www.youtube.com/embed/nhXXQdu7nKc?si=rHPsKIFuIBlT4aWR"
+              title="Rohit Kumar Demo Video"
+              className="absolute top-0 left-0 w-full h-full rounded-lg"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
         </DialogContent>
       </Dialog>
     </div>
