@@ -210,7 +210,7 @@ At KBC IAS Academy, I strive to bridge textbook knowledge with real-time underst
       name: "Imteyaz Ahmad Karimi",
       subject: "Public Administration",
       qualification: "Former Chairman, Bihar Public Service Commission (BPSC)",
-      experience: "Ex-BPSC Chairman",
+      experience: "Former Chairman, BPSC",
       image: "/fac4.jpg",
       youtubeUrl: "https://www.youtube.com/live/2J64kbrLyDM?si=r0IQlQS6vNKR4hjw",
       description: `Imteyaz Ahmad Karimi is a distinguished civil servant and administrator who served as the Chairman of the Bihar Public Service Commission (BPSC). Known for his integrity, administrative acumen, and commitment to transparency in recruitment, Mr. Karimi played a vital role in reforming the functioning of BPSC during his tenure.
@@ -227,7 +227,7 @@ His tenure is remembered for streamlining the examination process and ensuring a
       name: "Ashish Bharati",
       subject: "IPS Officer & Mentor",
       qualification: "Indian Police Service Officer",
-      experience: "Ex-BPSC Chairman",
+      experience: "IPS Officer",
       image: "/5acf3515-6b05-4ba9-b310-5f8b5b83aafa.jpg",
       youtubeUrl: "https://www.youtube.com/live/CxaYO_hajBM?si=ncKoXoLZqTDy_tLq",
       description: `Ashish Bharati is a distinguished Indian Police Service (IPS) officer who serves as a mentor and guide for KBC IAS Academy. With his extensive experience in law enforcement and public administration, he provides invaluable insights into the civil services examination and the responsibilities of public service.
