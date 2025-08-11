@@ -1212,7 +1212,7 @@ His mentorship ensures that students receive authentic insights into the world o
             </p>
             <div className="mt-4">
               <a 
-                href="/privacypolicy" 
+                href="/privacypolicy.html" 
                 className="text-gray-400 hover:text-white transition-colors underline"
               >
                 Privacy Policy

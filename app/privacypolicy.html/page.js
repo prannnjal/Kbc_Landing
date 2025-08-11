@@ -403,13 +403,21 @@ export default function PrivacyPolicy() {
                 You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
               </p>
 
+              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">No Refund Policy</h2>
+              <p className="text-gray-700 mb-4">
+                All purchases made through our Service are non-refundable. Once a payment has been processed for any product, service, or subscription offered by the Company, no refunds will be issued, regardless of the reason for cancellation or non-usage.
+              </p>
+              <p className="text-gray-700 mb-6">
+                We strongly encourage users to review all information, terms, and conditions before making any purchase. If you have any questions regarding a product or service, please contact us prior to completing your transaction.
+              </p>
+
               <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact Us</h2>
               <p className="text-gray-700 mb-4">
                 If you have any questions about this Privacy Policy, You can contact us:
               </p>
               <ul className="list-disc pl-6 space-y-2 mb-6">
                 <li className="text-gray-700">
-                  By visiting this page on our website: <a href="https://kbciasacademy.in/privacypolicy" rel="external nofollow noopener" target="_blank" className="text-blue-600 hover:text-blue-800 underline">https://kbciasacademy.in/privacypolicy</a>
+                  By visiting this page on our website: <a href="https://kbciasacademy.in/privacypolicy.html" rel="external nofollow noopener" target="_blank" className="text-blue-600 hover:text-blue-800 underline">https://kbciasacademy.in/privacypolicy.html</a>
                 </li>
               </ul>
             </div>
@@ -479,7 +487,7 @@ export default function PrivacyPolicy() {
             </p>
             <div className="mt-4">
               <a 
-                href="/privacypolicy" 
+                href="/privacypolicy.html" 
                 className="text-gray-400 hover:text-white transition-colors underline"
               >
                 Privacy Policy

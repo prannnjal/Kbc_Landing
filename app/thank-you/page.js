@@ -157,8 +157,6 @@ export default function ThankYouPage() {
               </a>
             </div>
           </div>
-
-
         </div>
       </div>
 
@@ -224,14 +222,14 @@ export default function ThankYouPage() {
             </p>
             <div className="mt-4">
               <a 
-                href="/privacypolicy" 
+                href="/privacypolicy.html" 
                 className="text-gray-400 hover:text-white transition-colors underline"
               >
                 Privacy Policy
               </a>
             </div>
-          </div>
-        </div>
+          </div> {/* closes border-t */}
+        </div> {/* closes container */}
       </footer>
 
       {/* Floating Action Buttons */}
@@ -253,4 +251,4 @@ export default function ThankYouPage() {
       </div>
     </div>
   )
-} 
+}
