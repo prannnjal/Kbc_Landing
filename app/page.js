@@ -1210,6 +1210,14 @@ His mentorship ensures that students receive authentic insights into the world o
             <p suppressHydrationWarning={true}>
               &copy; {year} KBC IAS Academy. All rights reserved. | Powered by KBC Nano Publication
             </p>
+            <div className="mt-4">
+              <a 
+                href="/privacypolicy" 
+                className="text-gray-400 hover:text-white transition-colors underline"
+              >
+                Privacy Policy
+              </a>
+            </div>
           </div>
         </div>
       </footer>

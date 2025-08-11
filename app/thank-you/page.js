@@ -222,6 +222,14 @@ export default function ThankYouPage() {
             <p suppressHydrationWarning={true}>
               &copy; {year} KBC IAS Academy. All rights reserved. | Powered by KBC Nano Publication
             </p>
+            <div className="mt-4">
+              <a 
+                href="/privacypolicy" 
+                className="text-gray-400 hover:text-white transition-colors underline"
+              >
+                Privacy Policy
+              </a>
+            </div>
           </div>
         </div>
       </footer>
